@@ -1,4 +1,4 @@
-# VORAL - Learning Management System
+# VORA - Learning Management System
 
 <!-- GitHub badges -->
 
@@ -35,7 +35,7 @@ Welcome to the Vora Learning Management System (LMS). This project allows users 
 
 1. **Clone the Repository:**
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/edwardbudaza/vora-lms.git
     cd vora-lms
     ```
 
@@ -50,6 +50,20 @@ Welcome to the Vora Learning Management System (LMS). This project allows users 
     ```
     The application will run on [http://localhost:3000](http://localhost:3000).
 
+#### Folder Structure
+
+- **actions/**: Contains server-side actions.
+- **app/**: Main application logic.
+  - **auth/**: Authentication-related pages and logic.
+  - **course/**: Course management and display logic.
+  - **dashboard/**: Dashboard views for students and teachers.
+  - **api/**: API routes for handling data operations.
+- **components/**: Reusable UI components.
+- **hooks/**: Custom hooks for state and effect management.
+- **lib/**: Library files for additional functionalities.
+- **prisma/**: Database schema and client.
+- **public/**: Static assets like images and icons.
+- **scripts/**: Automation and setup scripts.
 
 <details><summary><b>Folder Structure</b></summary>
 
@@ -122,21 +136,6 @@ vora-lms/
 ```
 </details>
 
-#### Folder Structure
-
-- **actions/**: Contains server-side actions.
-- **app/**: Main application logic.
-  - **auth/**: Authentication-related pages and logic.
-  - **course/**: Course management and display logic.
-  - **dashboard/**: Dashboard views for students and teachers.
-  - **api/**: API routes for handling data operations.
-- **components/**: Reusable UI components.
-- **hooks/**: Custom hooks for state and effect management.
-- **lib/**: Library files for additional functionalities.
-- **prisma/**: Database schema and client.
-- **public/**: Static assets like images and icons.
-- **scripts/**: Automation and setup scripts.
-
 ### Key Functionalities
 
 #### User Authentication
@@ -199,14 +198,11 @@ vora-lms/
 - [Next.js](https://nextjs.org/): Next.js is a React framework for building server-side rendered and statically generated web applications.
 - [TypeScript](https://www.typescriptlang.org/): TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 - [Tailwind CSS](https://tailwindcss.com/): Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.
-- [Chakra UI](https://chakra-ui.com/): Chakra UI is a component library that provides accessible, reusable, and composable UI components.
+- [Shadcn UI](https://ui.shadcn.com/): Shadcn UI is a component library that provides accessible, reusable, and composable UI components.
 - [Prisma](https://www.prisma.io/): Prisma is a TypeScript-first ORM for Node.js and the browser.
 - [Stripe](https://stripe.com/): Stripe is a payment processing platform used for handling course purchases.
 - [Uploadthing](https://uploadthing.com/): Uploadthing is a tool used for handling file uploads, likely integrated for uploading course-related media like videos and images.
 - [React](https://reactjs.org/): React is a JavaScript library for building user interfaces, used as the underlying library for Next.js.
-- [Node.js](https://nodejs.org/): Node.js is a runtime environment for executing JavaScript code server-side.
-- [npm](https://www.npmjs.com/): npm is a package manager for JavaScript, used for managing dependencies.
-- [VSCode](https://code.visualstudio.com/): VSCode is a popular development environment, indicated by the presence of the `.vscode` directory.
 - [Tailwind Intellisense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss): Tailwind Intellisense is an extension for VSCode that provides autocomplete and other utilities for working with Tailwind CSS.
 - [Server Components](https://nextjs.org/docs/basic-features/server-components): Server Components is a Next.js feature that allows for server-side rendering of React components.
 - [Rich Text Editor](https://www.tiny.cloud/): A rich text editor used for editing descriptions and other rich text content within the platform.
