@@ -19,6 +19,38 @@
 
 ## Vora Project Documentation
 
+### 📝 Overview
+
+Welcome to the Vora Learning Management System (LMS). This project allows users to browse, purchase, and engage with courses. Teachers can create, manage, and analyze their courses. Below is a detailed guide on how to set up and navigate through the project.
+
+### 🚀 Getting Started
+
+#### Prerequisites
+- Node.js (>=14.x)
+- npm (>=6.x) or yarn (>=1.x)
+- Visual Studio Code (VSCode)
+- Basic understanding of Next.js and TailwindCSS
+
+#### Project Setup
+
+1. **Clone the Repository:**
+    ```sh
+    git clone <repository-url>
+    cd vora-lms
+    ```
+
+2. **Install Dependencies:**
+    ```sh
+    npm install
+    ```
+
+3. **Run the Project:**
+    ```sh
+    npm run dev
+    ```
+    The application will run on [http://localhost:3000](http://localhost:3000).
+
+
 <details><summary><b>Folder Structure</b></summary>
 
 ```bash
@@ -89,36 +121,6 @@ vora-lms/
 └───scripts
 ```
 </details>
-### Overview
-
-Welcome to the Vora Learning Management System (LMS). This project allows users to browse, purchase, and engage with courses. Teachers can create, manage, and analyze their courses. Below is a detailed guide on how to set up and navigate through the project.
-
-### Getting Started
-
-#### Prerequisites
-- Node.js (>=14.x)
-- npm (>=6.x) or yarn (>=1.x)
-- Visual Studio Code (VSCode)
-- Basic understanding of Next.js and TailwindCSS
-
-#### Project Setup
-
-1. **Clone the Repository:**
-    ```sh
-    git clone <repository-url>
-    cd vora
-    ```
-
-2. **Install Dependencies:**
-    ```sh
-    npm install
-    ```
-
-3. **Run the Project:**
-    ```sh
-    npm run dev
-    ```
-    The application will run on [http://localhost:3000](http://localhost:3000).
 
 #### Folder Structure
 
@@ -215,24 +217,4 @@ Welcome to the Vora Learning Management System (LMS). This project allows users 
 
 ---
 
-### Setting Up Your Development Environment
 
-1. **Install Next.js and TailwindCSS:**
-    ```sh
-    npx create-next-app@latest lms-tutorial --typescript --tailwind --eslint
-    ```
-
-2. **Install and Configure ShadCN UI:**
-    ```sh
-    npx shadcn-ui@latest init
-    ```
-
-3. **Install Specific ShadCN UI Components:**
-    ```sh
-    npx shadcn-ui@latest add button
-    ```
-
-4. **Run the Development Server:**
-    ```sh
-    npm run dev
-    ```
