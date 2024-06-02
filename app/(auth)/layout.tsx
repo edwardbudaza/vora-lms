@@ -1,5 +1,3 @@
-import React from 'react'
-
 const AuthLayout = ({
     children
 }: {
@@ -9,7 +7,7 @@ const AuthLayout = ({
     <div className='h-full flex items-center justify-center'>
         {children}
     </div>
-  )
-}
+  );
+};
 
-export default AuthLayout
+export default AuthLayout;
