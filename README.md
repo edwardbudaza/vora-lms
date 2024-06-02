@@ -208,7 +208,7 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 # Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
 # See the documentation for all the connection string options: https://pris.ly/d/connection-strings
 
-DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.nddascq.mongodb.net/<database>"
+DATABASE_URL="mysql://<username>:<password>"
 
 UPLOADTHING_SECRET=sk_live_<yourownsecret>
 UPLOADTHING_APP_ID=<yourownappid>
