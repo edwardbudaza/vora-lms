@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Pencil } from "lucide-react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { Course } from "@prisma/client";
+import { Chapter } from "@prisma/client";
 
 import {
     Form,
@@ -19,23 +19,24 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Textarea } from "@/components/ui/textarea";
+import { Editor } from "@/components/editor";
+import { Preview } from "@/components/preview";
 
-interface DescriptionFormProps {
-    initialData: Course;
+interface ChapterDescriptionFormProps {
+    initialData: Chapter;
     courseId: string;
+    chapterId: string;
 };
 
 const formSchema = z.object({
-    description: z.string().min(1, {
-        message: "Descrption is required",
-    }),
+    description: z.string().min(1),
 });
  
-export const DescriptionForm = ({
+export const ChapterDescriptionForm = ({
     initialData,
     courseId,
-}: DescriptionFormProps) => {
+    chapterId,
+}: ChapterDescriptionFormProps) => {
     const [isEditing, setIsEditing] = useState(false);
 
     const toggleEdit = () => setIsEditing((current) => !current);
@@ -53,8 +54,8 @@ export const DescriptionForm = ({
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            await axios.patch(`/api/courses/${courseId}`, values);
-            toast.success("Course updated");
+            await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}`, values);
+            toast.success("Chapter updated");
             toggleEdit();
             router.refresh();
         } catch {
@@ -65,7 +66,7 @@ export const DescriptionForm = ({
     return (
         <div className="mt-6 border bg-slate-100 rounded-md p-4">
             <div className="font-medium flex items-center justify-between">
-                Course description
+                Chapter description
                 <Button onClick={toggleEdit} variant="ghost">
                     {isEditing ? (
                         <>Cancel</>
@@ -78,12 +79,17 @@ export const DescriptionForm = ({
                 </Button>
             </div>
             {!isEditing && (
-                <p className={cn(
+                <div className={cn(
                     "text-sm mt-2",
                     !initialData.description && "text-slate-500 italic"
                 )}>
-                    {initialData.description || "No description"}
-                </p>
+                    {!initialData.description && "No description"}
+                    {initialData.description && (
+                        <Preview
+                            value={initialData.description}
+                        />
+                    )}
+                </div>
             )}
             {isEditing && (
                 <Form {...form}>
@@ -97,9 +103,7 @@ export const DescriptionForm = ({
                             render={({ field }) => (
                                 <FormItem>
                                     <FormControl>
-                                        <Textarea 
-                                            disabled={isSubmitting}
-                                            placeholder="e.g. 'This course is about ...'"
+                                        <Editor 
                                             {...field}
                                         />
                                     </FormControl>

@@ -25,7 +25,7 @@ interface TitleFormProps {
     initialData: {
         title: string;
     };
-    courseId: String;
+    courseId: string;
 };
 
 const formSchema = z.object({

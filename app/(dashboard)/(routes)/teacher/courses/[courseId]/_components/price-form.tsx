@@ -25,7 +25,7 @@ import { formatPrice } from "@/lib/format";
 
 interface PriceFormProps {
     initialData: Course;
-    courseId: String;
+    courseId: string;
 };
 
 const formSchema = z.object({

@@ -24,7 +24,7 @@ import { ChaptersList } from "./chapters-list";
 
 interface ChaptersFormProps {
     initialData: Course & { chapters: Chapter[] };
-    courseId: String;
+    courseId: string;
 };
 
 const formSchema = z.object({
